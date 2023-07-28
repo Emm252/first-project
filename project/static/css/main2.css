@@ -1,0 +1,79 @@
+.column {
+    width: 50%;
+    padding: 50px 30px 50px 80px; /* Shorthand for padding, top-right-bottom-left */
+  }
+  
+  .row {
+    display: flex;
+    align-items: center; /* Vertically align the contents in both columns */
+  }
+  
+  .h1{
+    align-items: center;
+  }
+  button {
+    
+    font-size: 15px;
+    text-align: center;
+    transition: 0.3s;
+    background-color: white;
+    border-width: 0px;
+    box-sizing: border-box;
+    color: grey;
+    border-color: rgb(70, 196, 255);
+    box-shadow: none;
+    cursor: pointer;
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+ 
+  button:hover, button:active {
+    background-color: green;
+    color: white;
+  }
+
+  .column {
+    width: 50%;
+    padding: 50px 30px 50px 80px; /* Shorthand for padding, top-right-bottom-left */
+  }
+  
+  .row {
+    display: flex;
+    align-items: center; /* Vertically align the contents in both columns */
+  }
+  
+  .header {
+    padding: 1px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+  }
+  .footer {
+    padding: 20px 0; /* Add padding to the footer for spacing */
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+    margin-top: auto; /* Push the footer to the bottom of the page */
+  }
+
+  a.footer-link {
+    color: rgb(1, 1, 68); 
+    text-decoration: underline; 
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  

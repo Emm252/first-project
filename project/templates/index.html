@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Authentication site</title>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Form Authentication Project</h1>
+        <p>My first Python Project</p>
+      </div> 
+
+      <div class="row">
+        <div class="column">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert">
+                <strong>Message:</strong>{{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+            
+            {% if user.is_authenticated %}
+                <h3>Welcome, {{ user.username }}</h3>
+                <h3>You're successfully Logged in.</h3>
+                <button type="submit" ><a href="signout">SignOut</a></button>
+            {% else %}
+                <h1>Welcome, please SignUp <br> if it's Your first time</h1>
+            {% endif %}
+        </div>
+        <div class="column">
+            {% if not user.is_authenticated %}
+                <button type="submit" ><a href="signup">SignUp</a></button>
+                <button type="submit" ><a href="signin">SignIn</a></button>
+            {% endif %}
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>Design By Emma<br>
+        <a href="" class="footer-link">Web Site development is what I love most</a></p>
+    </div> 
+    
+</body>
+</html>
